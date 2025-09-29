@@ -3,343 +3,100 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Como Jogar KSP - Documentação Técnica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kerbal Space Program Wiki</title>
     <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet" />
+    <!-- Ícones temáticos (exemplo com Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
+    <header id="main-header">
+        <div class="header-content">
+            <div class="logo-area">
+                <img src="./img/ksp-logo-wiki.png" alt="KSP Wiki Logo" class="wiki-logo" />
+                <span class="site-title">KSP Wiki</span>
+            </div>
+            <div class="search-area">
+                <input type="text" id="search-input" placeholder="Pesquisar artigos..." class="search-input" />
+                <button id="search-button" class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <nav class="quick-links">
+                <a href="#home" class="nav-link">Página Inicial</a>
+                <a href="#tutorials" class="nav-link">Tutoriais</a>
+                <a href="#parts" class="nav-link">Partes</a>
+                <a href="#planets" class="nav-link">Planetas</a>
+                <a href="#mods" class="nav-link">Mods</a>
+                <a href="#about" class="nav-link">Sobre</a>
+            </nav>
+        </div>
+    </header>
 
-    <nav id="navbar">
-        <header>
-            <img src="./img/ksp-logo.png" alt="Logo KSP" class="logo" />
-            Como Jogar KSP - Guia Completo
-        </header>
-        <a class="nav-link" href="#Introdução">Introdução</a>
-        <a class="nav-link" href="#Conceitos_Importantes">Conceitos Importantes</a>
-        <a class="nav-link" href="#Construção_de_Foguetes">Construção de Foguetes</a>
-        <a class="nav-link" href="#Lançamento_e_Órbita">Lançamento e Órbita</a>
-        <a class="nav-link" href="#Transferência_Interplanetária">Transferência Interplanetária</a>
-        <a class="nav-link" href="#Cálculos_Matemáticos">Cálculos Matemáticos</a>
-        <a class="nav-link" href="#Pouso_e_Reentrada">Pouso e Reentrada</a>
-        <a class="nav-link" href="#Mapa_de_Delta-V">Mapa de Delta-V</a>
-        <a class="nav-link" href="#Corpos_Celestes_do_KSP">Corpos Celestes do KSP</a>
-        <a class="nav-link" href="#DLCs_Oficiais">DLCs Oficiais</a>
-        <a class="nav-link" href="#Como_Baixar_e_Instalar_Mods">Como Baixar e Instalar Mods</a>
-        <a class="nav-link" href="#Construção_de_Aviões">Construção de Aviões</a>
-    </nav>
-
-    <main id="main-doc">
-
-        <section id="Introdução" class="main-section">
-            <header>Introdução</header>
-            <img src="https://cdn1.epicgames.com/offer/ca0530b485754032be50cb6f27be0c2c/EGS_KerbalSpaceProgram_Squad_S1_2560x1440-380681e19358cb3d1e1162ce755e5e01"
-                alt="Imagem introdutória de KSP" class="section-img" />
-            <p>Kerbal Space Program (KSP) é um simulador de voo espacial que permite construir e pilotar foguetes e
-                naves espaciais. Este guia vai ajudar você a começar sua jornada rumo às estrelas.</p>
-            <p>Você aprenderá desde conceitos básicos até técnicas avançadas de pilotagem, planejamento de missões e
-                exploração espacial.</p>
-        </section>
-
-        <section id="Conceitos_Importantes" class="main-section">
-            <header>Conceitos Importantes</header>
-            <img src="https://preview.redd.it/53plijy8ptj21.png?width=1064&format=png&auto=webp&s=be4c1449038af2a13855ebeae05ace55abd566e6"
-                alt="Conceitos importantes em KSP" class="section-img" />
-            <p class="highlight-concept">
-                Centro de Empuxo: ponto onde a força do ar atua sobre a nave, importante para estabilidade durante o
-                voo.
-            </p>
-            <p class="highlight-concept">
-                Centro de Massa: o equilíbrio da massa da nave, que deve estar alinhado com o centro de empuxo para um
-                voo estável.
-            </p>
-            <p class="highlight-concept">
-                Aerodinâmica: o estudo das forças do ar sobre a nave, essencial para projetar asas e superfícies de
-                controle.
-            </p>
-        </section>
-
-        <section id="Construção_de_Foguetes" class="main-section">
-            <header>Construção de Foguetes</header>
-            <img src="https://cdn2.unrealengine.com/egs-kerbalspaceprogram-squad-g1a-00-1920x1080-dd700d1a999e.jpg"
-                alt="Montagem de foguetes no VAB" class="section-img" />
-            <p>No VAB (Vehicle Assembly Building), você monta foguetes empilhando peças, configurando estágios e
-                adicionando carga útil.</p>
-            <p>É importante distribuir bem o peso e manter o centro de massa alinhado para garantir um voo estável.</p>
+    <aside id="sidebar-wiki">
+        <nav>
+            <h3><i class="fas fa-rocket sidebar-icon"></i> Explorar</h3>
             <ul>
-                <li>Use motores adequados para cada estágio.</li>
-                <li>Configure separadores para descartar partes vazias.</li>
-                <li>Adicione paraquedas para aterrissagem segura.</li>
+                <li><a href="#home" class="nav-link"><i class="fas fa-home sidebar-icon"></i> Página Inicial</a></li>
+                <li><a href="#article/historia-do-jogo" class="nav-link"><i class="fas fa-history sidebar-icon"></i> História do Jogo</a></li>
+                <li><a href="#article/atualizacoes-versoes" class="nav-link"><i class="fas fa-sync-alt sidebar-icon"></i> Atualizações/Versões</a></li>
             </ul>
 
-            <section id="Lançamento_e_Órbita" class="main-section">
-                <header>Lançamento e Órbita</header>
-                <img src="https://i.imgur.com/lNgzIPI.jpg" alt="Foguete em órbita" class="section-img" />
-                <p>Para entrar em órbita, lance seu foguete verticalmente e depois incline-o para seguir uma trajetória
-                    curva chamada de “gravidade assistida”.</p>
-                <p>Monitore a velocidade orbital e o apoastro para garantir uma órbita estável.</p>
-                <ul>
-                    <li>Estágios de queima gradual para economizar combustível.</li>
-                    <li>Controle de atitude com RCS ou motores menores.</li>
-                    <li>Ajuste a órbita para missões futuras.</li>
-                </ul>
-            </section>
+            <h3><i class="fas fa-book-open sidebar-icon"></i> Guia de Jogo</h3>
+            <ul>
+                <li><a href="#article/comecando-no-ksp" class="nav-link"><i class="fas fa-play sidebar-icon"></i> Começando</a></li>
+                <li><a href="#article/construcao-de-foguetes" class="nav-link"><i class="fas fa-cogs sidebar-icon"></i> Construção de Foguetes</a></li>
+                <li><a href="#article/orbita-e-mecanica-orbital" class="nav-link"><i class="fas fa-globe-americas sidebar-icon"></i> Órbita e Mecânica Orbital</a></li>
+                <li><a href="#article/viagem-interplanetaria" class="nav-link"><i class="fas fa-space-shuttle sidebar-icon"></i> Dicas de Viagem Interplanetária</a></li>
+            </ul>
 
-            <section id="Transferência_Interplanetária" class="main-section">
-                <header>Transferência Interplanetária</header>
-                <img src="https://i.ytimg.com/vi/q4tPfWmFOeM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLChJfk3hOaiPRn5m_oz8OtkyreTog"
-                    alt="Trajetória interplanetária" class="section-img" />
-                <p>Planeje janelas de lançamento para viajar entre planetas utilizando manobras de transferência de
-                    Hohmann.</p>
-                <p>Use o mapa de Delta-V para estimar o combustível necessário.</p>
-                <ul>
-                    <li>Estime o tempo de viagem.</li>
-                    <li>Configure manobras de interceptação e captura.</li>
-                    <li>Monitore os recursos da nave durante a viagem.</li>
-                </ul>
-            </section>
+            <h3><i class="fas fa-cube sidebar-icon"></i> Partes (Parts)</h3>
+            <ul>
+                <li><a href="#category/motores" class="nav-link"><i class="fas fa-fire-alt sidebar-icon"></i> Motores</a></li>
+                <li><a href="#category/tanques-de-combustivel" class="nav-link"><i class="fas fa-gas-pump sidebar-icon"></i> Tanques de Combustível</a></li>
+                <li><a href="#category/estruturas" class="nav-link"><i class="fas fa-tools sidebar-icon"></i> Estruturas</a></li>
+                <li><a href="#category/comando-e-controle" class="nav-link"><i class="fas fa-satellite-dish sidebar-icon"></i> Comando e Controle</a></li>
+                <li><a href="#category/ciencia" class="nav-link"><i class="fas fa-flask sidebar-icon"></i> Ciência</a></li>
+            </ul>
 
-            <section id="Pouso_e_Reentrada" class="main-section">
-                <header>Pouso e Reentrada</header>
-                <img src="https://i.imgur.com/MOnHKxf.png" alt="Reentrada e pouso" class="section-img" />
-                <p>Prepare sua nave para reentrar na atmosfera, usando escudos térmicos e reduzindo velocidade com
-                    paraquedas.</p>
-                <p>Controle a atitude para evitar aquecimento excessivo e perdas de controle.</p>
-                <ul>
-                    <li>Posicione o escudo térmico na direção do movimento.</li>
-                    <li>Use freios aerodinâmicos e retrofoguetes se disponíveis.</li>
-                    <li>Planeje o local de pouso para segurança máxima.</li>
-                </ul>
-            </section>
+            <h3><i class="fas fa-globe sidebar-icon"></i> Corpos Celestes</h3>
+            <ul>
+                <li><a href="#article/kerbin" class="nav-link">Kerbin</a></li>
+                <li><a href="#article/mun" class="nav-link">Mun</a></li>
+                <li><a href="#article/minmus" class="nav-link">Minmus</a></li>
+                <li><a href="#article/duna" class="nav-link">Duna</a></li>
+                <li><a href="#article/eve" class="nav-link">Eve</a></li>
+                <li><a href="#article/jool" class="nav-link">Jool (+ luas)</a></li>
+            </ul>
 
-            <section id="Cálculos_Matemáticos" class="main-section">
-                <header>Cálculos Matemáticos</header>
-                <img src="https://arquivos.respondeai.com.br/seo-mirror/book-exercise/2023/0a6034e9-389c-4b1d-b947-ba0c24f16a1e.webp"
-                    alt="Cálculos no KSP" class="section-img" />
-                <p>Dominar esses cálculos fundamentais vai elevar seu jogo para o próximo nível:</p>
+            <h3><i class="fas fa-puzzle-piece sidebar-icon"></i> Mods Populares</h3>
+            <ul>
+                <li><a href="#article/principais-mods" class="nav-link">Principais Mods</a></li>
+            </ul>
 
-                <h3>1. Equação do Foguete (Tsiolkovsky)</h3>
-                <code>// Cálculo de Delta-V total
-Δv = Isp × g₀ × ln(m₀/m₁)
-Onde:
-Isp = Impulso específico (s)
-g₀ = 9.81 m/s² (gravidade Kerbin)
-m₀ = Massa inicial (kg)
-m₁ = Massa final (kg)
+            <h3><i class="fas fa-medal sidebar-icon"></i> Conquistas e Desafios</h3>
+            <ul>
+                <li><a href="#article/lista-de-conquistas" class="nav-link">Lista de Conquistas</a></li>
+            </ul>
 
-Exemplo: 
-Isp = 320s
-m₀ = 50t, m₁ = 10t
-Δv = 320 × 9.81 × ln(50/10) ≈ 5049 m/s</code>
+            <h3><i class="fas fa-users sidebar-icon"></i> Comunidade e Guias</h3>
+            <ul>
+                <li><a href="#article/foruns-comunidade" class="nav-link">Fóruns</a></li>
+                <li><a href="#article/tutoriais-comunidade" class="nav-link">Tutoriais da Comunidade</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-                <h3>2. Velocidade Orbital</h3>
-                <code>// Velocidade circular orbital
-v = √(μ/(R + h))
-Onde:
-μ = 3.5316×10¹² m³/s² (Kerbin)
-R = 600km (raio Kerbin)
-h = altitude (m)
-
-Exemplo: Órbita a 80km
-v = √(3.5316×10¹²/(600,000 + 80,000)) ≈ 2278 m/s</code>
-
-                <h3>3. Transferência de Hohmann</h3>
-                <code>// Δv para transferência entre órbitas
-Δv₁ = √(μ/r₁) × (√(2r₂/(r₁+r₂)) - 1)
-Δv₂ = √(μ/r₂) × (1 - √(2r₁/(r₁+r₂)))
-
-Exemplo: Kerbin (r₁=700km) → Mun (r₂=12,000km)
-Δv₁ ≈ 860 m/s (injeção)
-Δv₂ ≈ 310 m/s (captura)</code>
-
-                <h3>4. Força G em Manobras</h3>
-                <code>// Cálculo de força G
-G = a / 9.81
-Onde a = aceleração (m/s²)
-
-Exemplo: Foguete com:
-Empuxo = 200kN
-Massa = 10t
-a = 200,000/10,000 = 20 m/s²
-G = 20/9.81 ≈ 2.04 G</code>
-
-                <h3>5. Eficiência de Estágios</h3>
-                <code>// Razão de massa do estágio
-λ = m₀/m₁
-Onde:
-m₀ = massa total estágio
-m₁ = massa estágio vazio
-
-Exemplo:
-Estágio com tanque cheio = 15t
-Tanque vazio = 5t
-λ = 15/5 = 3
-Quanto maior λ, mais eficiente</code>
-
-                <h3>6. Tempo de Queima</h3>
-                <code>// Duração da queima
-t = (mᵢ - m_f) / ṁ
-Onde:
-mᵢ = massa inicial combustível
-m_f = massa final
-ṁ = taxa de consumo (kg/s)
-
-Exemplo:
-Combustível = 4000kg
-ṁ = 20kg/s
-t = 4000/20 = 200s (3m20s)</code>
-            </section>
-
-            <section id="Mapa_de_Delta-V" class="main-section">
-                <header>Mapa de Delta-V</header>
-                <img src="https://i.redd.it/q8i47o8prlz41.png" alt="Mapa de Delta-V do KSP" class="section-img" />
-                <p>Este mapa mostra a quantidade estimada de Delta-V necessária para viajar entre os principais corpos
-                    do sistema Kerbol.</p>
-                <p>Ele é um recurso essencial para planejamento de missões e cálculo de combustível.</p>
-            </section>
-
-            <section id="Corpos_Celestes_do_KSP" class="main-section">
-                <header>Corpos Celestes do KSP</header>
-                <img src="https://static.wikia.nocookie.net/grupo-falcons/images/7/73/KERBOLSYS.jpg/revision/latest?cb=20241019035146&path-prefix=pt-br"
-                    alt="Sistema Kerbol" class="section-img" />
-                <table class="celestial-table">
-                    <thead>
-                        <tr>
-                            <th>Imagem</th>
-                            <th>Nome</th>
-                            <th>Tipo</th>
-                            <th>Raio (km)</th>
-                            <th>Distância do Kerbol (km)</th>
-                            <th>Delta-v para órbita (m/s)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Estrela -->
-                        <tr>
-                            <td><img src="https://static.wikia.nocookie.net/kerbalspaceprogram/images/c/c7/Kerbol.png/revision/latest?cb=20220326175759"
-                                    alt="Kerbol" class="table-img" /></td>
-                            <td>Kerbol</td>
-                            <td>Estrela</td>
-                            <td>261,600</td>
-                            <td>0</td>
-                            <td>-</td>
-                        </tr>
-
-                        <!-- Planetas internos -->
-                        <tr>
-                            <td><img src="./img/Moho.png"
-                                    alt="Moho"
-                                    class="table-img" /></td>
-                            <td>Moho</td>
-                            <td>Planeta</td>
-                            <td>250</td>
-                            <td>5,263,138,304</td>
-                            <td>~870</td>
-                        </tr>
-
-                        <tr>
-                            <td><img src="https://static.wikia.nocookie.net/kerbalspaceprogram/images/1/19/Eve.jpg/revision/latest?cb=20170511223803"
-                                    alt="Eve" class="table-img" /></td>
-                            <td>Eve</td>
-                            <td>Planeta</td>
-                            <td>700</td>
-                            <td>9,832,684,544</td>
-                            <td>~1,300</td>
-                        </tr>
-
-                        <tr>
-                            <td><img src="https://static.wikia.nocookie.net/kerbalspaceprogram/images/c/c9/Kerbin.jpg/revision/latest/scale-to-width-down/268?cb=20190618003821"
-                                    alt="Kerbin" class="table-img" /></td>
-                            <td>Kerbin</td>
-                            <td>Planeta</td>
-                            <td>600</td>
-                            <td>13,599,840,256</td>
-                            <td>3,400</td>
-                        </tr>
-
-                        <tr>
-                            <td><img src="https://static.wikia.nocookie.net/kerbalspaceprogram/images/7/73/Duna.jpg/revision/latest?cb=20211108060042"
-                                    alt="Duna" class="table-img" /></td>
-                            <td>Duna</td>
-                            <td>Planeta</td>
-                            <td>320</td>
-                            <td>20,726,155,264</td>
-                            <td>~1,450</td>
-                        </tr>
-
-                        <!-- Planetas externos -->
-                        <tr>
-                            <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6x7YVGz-88KV3iRxphxQiOyY0cpA80IKIeg&s"
-                                    alt="Dres" class="table-img" /></td>
-                            <td>Dres</td>
-                            <td>Planeta anão</td>
-                            <td>138</td>
-                            <td>40,839,348,736</td>
-                            <td>~430</td>
-                        </tr>
-
-                        <tr>
-                            <td><img src="https://static.wikia.nocookie.net/kerbalspaceprogram/images/0/03/Jool.jpg/revision/latest?cb=20141011150232"
-                                    alt="Jool" class="table-img" /></td>
-                            <td>Jool</td>
-                            <td>Gigante gasoso</td>
-                            <td>6,000</td>
-                            <td>68,773,560,320</td>
-                            <td>~1,400</td>
-                        </tr>
-
-                        <tr>
-                            <td><img src="./img/Eloo.png"
-                                    alt="Eeloo" class="table-img" /></td>
-                            <td>Eeloo</td>
-                            <td>Planeta anão</td>
-                            <td>210</td>
-                            <td>90,118,820,352</td>
-                            <td>~620</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section id="DLCs_Oficiais" class="main-section">
-                <header>DLCs Oficiais</header>
-                <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/283740/header.jpg?t=1738037589"
-                    alt="Conteúdo das DLCs" class="section-img" />
-                <p>Explore as expansões oficiais para o KSP, que adicionam missões, peças e funcionalidades.</p>
-                <ul>
-                    <li>KSP: Making History – missões históricas e editor de missões</li>
-                    <li>KSP: Breaking Ground – ciência e peças avançadas para exploração</li>
-                </ul>
-            </section>
-
-            <section id="Como_Baixar_e_Instalar_Mods" class="main-section">
-                <header>Como Baixar e Instalar Mods</header>
-                <img src="https://preview.redd.it/curseforge-i-gotta-ask-what-the-hell-were-you-smoking-when-v0-p26i6ua1ypdd1.png?width=1080&crop=smart&auto=webp&s=ca1a5f15e56ab8a943fe89ce32f659418ef67267"
-                    alt="Mods para KSP" class="section-img" />
-                <p>Mods permitem expandir e personalizar o jogo. Veja como instalar:</p>
-                <ol>
-                    <li>Baixe mods confiáveis de sites como CurseForge ou Spacedock.</li>
-                    <li>Extraia os arquivos para a pasta GameData no diretório do KSP.</li>
-                    <li>Use gerenciadores de mods como CKAN para facilitar o processo.</li>
-                </ol>
-            </section>
-
-            <section id="Construção_de_Aviões" class="main-section">
-                <header>Construção de Aviões</header>
-                <img src="https://preview.redd.it/ejk5m8e1ttj21.png?width=1040&format=png&auto=webp&s=c3a479da288cdcab3840571c1f3a95af5401c6d7"
-                    alt="Construção de aviões no SPH" class="section-img" />
-                <p>Use o SPH (Spaceplane Hangar) para construir aeronaves e naves espaciais reutilizáveis.</p>
-                <p>Dicas:</p>
-                <ul>
-                    <li>Equilíbrio aerodinâmico é essencial para voo estável.</li>
-                    <li><strong>SEMPRE</strong> mantenha o centro aerodinâmico atrás do centro de massa assim como na
-                        imagem</li>
-                    <li>Use superfícies de controle, asas e motores a jato.</li>
-                    <li>Teste em pistas e aprenda a pousar com precisão.</li>
-                </ul>
-            </section>
+    <main id="main-content-wiki">
+        <!-- Conteúdo dinâmico será carregado aqui -->
     </main>
+
+    <div class="theme-switcher">
+        <button id="theme-toggle"><i class="fas fa-adjust"></i> Alternar Tema</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
